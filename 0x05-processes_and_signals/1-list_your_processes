@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# A Bash script that lists only the script’s own processes with UID
+# A Bash script that lists all processes UID + command
 
-ps -o uid=,cmd= -p $(pgrep -f $(basename $0))
+ps -e -o uid=,cmd= | grep $(basename $0)
