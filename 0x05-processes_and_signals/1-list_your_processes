@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 # A Bash script that lists all processes with numeric UID and full command
 
+echo "UID"
 ps -e -o uid=,cmd=
