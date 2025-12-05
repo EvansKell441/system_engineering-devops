@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 # A Bash script that prints "I am invincible!!!" when receiving SIGTERM
 
-trap 'echo I am invincible!!!; exit 0' SIGTERM
+# Trap SIGTERM and print the required message immediately
+trap 'echo I am invincible!!!' SIGTERM
 
+# Infinite loop (no sleep)
 while true; do
     :
 done
