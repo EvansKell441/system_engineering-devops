@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# A Bash script that displays all currently running processes with hierarchy
+# A Bash script that lists all running processes with full START time and proper header
 
-ps -e -o user,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,command --forest
+ps -eo user,start_time,command
