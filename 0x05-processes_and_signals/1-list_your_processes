@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# A Bash script that displays its own UID and full command
+# A Bash script that lists only the script’s own processes with UID
 
-ps -o uid=,cmd= -p $$
+ps -o uid=,cmd= -p $(pgrep -f $(basename $0))
