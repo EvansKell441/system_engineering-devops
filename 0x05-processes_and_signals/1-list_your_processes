@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# A Bash script that lists all processes UID + command
+# A Bash script that displays all currently running processes with hierarchy
 
-ps -e -o uid=,cmd= | grep $(basename $0)
+ps -e -o user,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,command --forest
