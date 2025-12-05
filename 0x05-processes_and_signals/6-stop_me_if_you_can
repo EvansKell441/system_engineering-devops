@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # A Bash script that stops the 4-to_infinity_and_beyond process without using kill or killall
 
-pgrep -f 4-to_infinity_and_beyond | xargs pkill -P
+pkill -f 4-to_infinity_and_beyond
