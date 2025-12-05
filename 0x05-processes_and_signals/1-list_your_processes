@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# A Bash script that displays all processes in UID format, including hierarchy
+# A Bash script that lists all processes, showing only UID and full command
 
-ps -e -o uid,cmd --forest
+ps -e -o uid,cmd --no-headers
