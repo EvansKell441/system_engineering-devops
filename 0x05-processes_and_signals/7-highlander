@@ -2,8 +2,8 @@
 # A Bash script that continuously displays "To infinity and beyond" every 2 seconds
 # Prints "I am invincible!!!" immediately when receiving a SIGTERM signal
 
-# Trap SIGTERM and print the message immediately
-trap 'echo "I am invincible!!!"' SIGTERM
+# Trap SIGTERM and print message immediately
+trap 'echo "I am invincible!!!" >&2' SIGTERM
 
 while true
 do
