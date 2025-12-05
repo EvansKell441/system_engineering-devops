@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# A Bash script that lists all running processes with full START time and proper header
+# A Bash script that lists all running processes with hierarchy and proper headers
 
-ps -eo user,start_time,command
+ps -eo user,start_time,command --forest
