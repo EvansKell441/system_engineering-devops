@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
-# A Bash script that continuously displays "To infinity and beyond" every 2 seconds
+# A Bash script that continuously displays "To infinity and beyond"
+# Prints "I am invincible!!!" when receiving SIGTERM
 
+# Trap SIGTERM and print message
 trap 'echo "I am invincible!!!"' SIGTERM
 
 # Infinite loop
