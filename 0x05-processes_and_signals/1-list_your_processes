@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# A Bash script that lists all processes, showing only UID and full command
+# A Bash script that lists all processes with numeric UID and full command
 
-ps -e -o uid,cmd --no-headers
+ps -e -o uid=,cmd=
