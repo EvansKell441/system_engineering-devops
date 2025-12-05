@@ -1,11 +1,23 @@
 #!/usr/bin/env bash
-# A Bash script that continuously displays "To infinity and beyond" every 2 seconds
+# Simulates both 7-highlander (infinite loop) and 67-stop_me_if_you_can (sending SIGTERM)
 
-# Trap SIGTERM and print message immediately
-trap 'echo "I am invincible!!!" >&2' SIGTERM
+trap 'echo "I am invincible!!!"' SIGTERM
 
-while true
-do
-  echo "To infinity and beyond"
-  sleep 2
+while true; do
+    echo "To infinity and beyond"
+    sleep 2
+done &
+HIGHLANDER_PID=$!
+
+sleep 3
+
+for i in 1 2 3; do
+    kill -TERM $HIGHLANDER_PID
+    sleep 2
 done
+
+sleep 4
+
+kill -INT $HIGHLANDER_PID
+wait $HIGHLANDER_PID 2>/dev/null
+echo "Simulation finished."
