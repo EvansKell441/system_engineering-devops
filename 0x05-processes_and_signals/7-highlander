@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-A Bash script that continuously displays "To infinity and beyond"
+#A Bash script that continuously displays "To infinity and beyond"
 trap "echo I am invisible!!!" SIGTERM
 while true
 do
