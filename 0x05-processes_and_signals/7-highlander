@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# A Bash script that continuously displays "To infinity and beyond" every 2 seconds
 trap "echo I am invincible!!!" SIGTERM
 while true
 do
